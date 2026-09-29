@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Sorriso  Clínica Odontológica</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Meu Sorriso</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="inicio">Início</a></li>
+                <li><a href="sevicos.html">Serviços</a></li>
+                <li><a href="agendamento.html">Agendar</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <a href="agendamento.html" class="bnt-agendar">Agendar consulta</a>
+    </header>
+
+    <main>
+        <h2>Pedido de agendamento</h2>
+        <p>Preencha os dados abaixo. Nossa recepção entrará em contato para confirmar o horário. </p>
+
+        <form action="#" method="post" id="formulario">
+            <fieldset>
+                <label for="nome">Nome Completo *</label><input type="text" id="nome" name="nome" required placeholder="Seu nome">
+
+                <label for="email">E-mail *</label><input type="email" id="email" name="email" required placeholder="email@exemplo.com">
+
+                <label for="telefone">Telefone / WhatsApp *</label><input type="tel" id="telefone" name="nome" required placeholder="(61)9000-0000">
+
+                <label for="especialidade">Especialidade *</label>
+                <select name="especialidade" id="especialidade" required>
+                    <option value="">Selecione</option>
+                    <option value="geral">Clínica geral</option>
+                    <option value="odontopediatria">Odontopediatria</option>
+                    <option value="ortodontia">Ortodontia</option>
+                    <option value="endodontia">Endodontia</option>
+                 </select>
+                    <label for="data">Data preferida *</label><input type="date" id="data" required>
+
+                    <label for="">Turno prreferido *</label>
+                    <div class="radio-grupo">
+                        <label>
+                            <input type="radio" name="turno" value="manha" required> Manhã
+                        </label>
+                        <label>
+                            <input type="radio" name="turno" value="tarde" required> Tarde
+                        </label>
+                        <label>
+                            <input type="radio" name="turno" value="noite" required> Noite
+                        </label>
+                    </div>
+
+                    <label>Já é paciente da Clínica?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="ja_paciente" value="sim"> Sim, já sou paciente</label>
+
+                        <label><input type="checkbox" name="convenio" value="sim"> Tenho convênio odontológico</label>
+                    </div>
+                    <label for="obs">Obsevações</label>
+                    <textarea name="obs" id="obs" rows="4" placeholder="Alguma infomação importante para o atendimento?"></textarea>
+
+                    <button type="submit"> Enviar pedido de agendamento</button>
+                
+            </fieldset>
+        </form>
+        <p id="mensagem"></p>
+
+        <div class="aviso"> Campos com * são obrigatórios. Após o envio, você receberá a confirmação por e-mail.</div>
+    </main>
+    <footer>  &copy; Clínica meu Sorriso Projeto acadêmico de IHC</footer>
+    
+    <script src="js/clinica.js"></script>
+</body>
+</html>
